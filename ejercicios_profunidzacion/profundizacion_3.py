@@ -4,7 +4,7 @@
 # Autor: Inove Coding School
 # Version: 2.0
 
-# NOTA: 
+# NOTA:
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
 # Están pensados para aquellos con conocimientos previo o que dispongan
 # de mucho más tiempo para abordar estos temas por su cuenta.
@@ -37,22 +37,41 @@ Debe contar la cantidad de notas válidas y la cantidad de ausentes
 '''
 
 print("Mi organizador académico (#_#)")
+
 # Empezar aquí la resolución del ejercicio
+# Ya le hemos inicializado en 0
+sumatoria = 0
+# Aquí debe contar cuantas notas válidas encontró
+cantidad_notas = 0
+# Aquí debe contar cuantos ausentes hubo
+cantidad_ausentes = 0
 
 # Para calcular el promedio primero debe obtener la suma
-# de todas las notas, que irá almacenando en esta variable
-sumatoria = 0           # Ya le hemos inicializado en 0
-
-cantidad_notas = 0      # Aquí debe contar cuantas notas válidas encontró
-cantidad_ausentes = 0   # Aquí debe contar cuantos ausentes hubo
-
-# Realice aquí el bucle para recorrer todas las notas
+# de todas las notas, que irá almacenando en esta variable# Realice aquí el bucle para recorrer todas las notas
 # y cacular la sumatoria
+for nota in notas:
+    if nota >= 0:
+        cantidad_notas += 1
+        sumatoria += nota
+    else:
+        cantidad_ausentes += 1
 
 # Terminado el bucle calcule el promedio como
 # promedio = sumatoria / cantidad_notas
+promedio = sumatoria / cantidad_notas
 
 # Utilice la nota promedio calculada y transformela
 # a calificación con letras, imprima en pantalla el resultado
+if promedio >= 90:
+    print("A")
+elif promedio >= 80:
+    print("B")
+elif promedio >= 70:
+    print("C")
+elif promedio >= 60:
+    print("D")
+else:
+    print("F")
 
 # Imprima en pantalla al cantidad de ausentes
+print("Cantidad de ausentes =", cantidad_ausentes)

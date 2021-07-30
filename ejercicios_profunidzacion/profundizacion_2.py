@@ -4,7 +4,7 @@
 # Autor: Inove Coding School
 # Version: 2.0
 
-# NOTA: 
+# NOTA:
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
 # Están pensados para aquellos con conocimientos previo o que dispongan
 # de mucho más tiempo para abordar estos temas por su cuenta.
@@ -35,3 +35,29 @@ alguno de lo soportados o no es la palabra "FIN".
 
 print("Mi Calculadora (^_^)")
 # Empezar aquí la resolución del ejercicio
+
+while True:
+    numero_1 = int(input("Ingrese un numero \n"))
+    numero_2 = int(input("Ingrese un numero \n"))
+    operador = str(
+        input("Ingrese un operador +, -, *, /, **, FIN(con este termina)"))
+
+    if operador == "+":
+        suma = numero_1 + numero_2
+        print("El resultado de la suma es", suma)
+    elif operador == "-":
+        resta = numero_1 - numero_2
+        print("El resultado de la resta es", resta)
+    elif operador == "*":
+        multiplicacion = numero_1 * numero_2
+        print("El resultado de la multiplicacion es", multiplicacion)
+    elif operador == "/":
+        division = numero_1 / numero_2
+        print("El resultado de la division es", division)
+    elif operador == "**":
+        potencia = numero_1 ** numero_2
+        print("El resultado de la potencia es", potencia)
+    elif operador == "FIN":
+        break
+    else:
+        print("ERROR! el operador ingresado no es alguno de lo soportados o no es la palabra FIN")
